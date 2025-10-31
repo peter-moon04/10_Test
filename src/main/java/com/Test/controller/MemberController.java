@@ -1,21 +1,19 @@
 package com.Test.controller;
 
-import java.util.List;
+
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.Test.dto.MemberDTO;
 
-import jakarta.servlet.http.HttpSession;
+
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -44,13 +42,7 @@ public class MemberController {
 		}
 		return "redirect:/";
 	}
-	// //회원 가입 처리
-	// @PostMapping("/signup")
-	// public String join(@ModelAttribute MemberDTO memberDTO) {
-	// 	log.info("member: " + memberDTO);
-	// 	service.save(memberDTO);  //서비스에 있는 save() 호출
-	// 	return "redirect:/";
-	// }
+
 
 	
 }
