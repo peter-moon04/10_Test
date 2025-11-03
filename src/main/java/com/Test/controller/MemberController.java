@@ -26,17 +26,12 @@ public class MemberController {
 
 	//회원 가입 페이지
 	@GetMapping("/signup")
-	public String joinForm() {
-		return "members/signup";
-	}
-	
-	@GetMapping
-	public String showForm(@ModelAttribute MemberDTO memberDTO) {
+	public String joinForm(@ModelAttribute("member") MemberDTO memberDTO) {
 		return "members/signup";
 	}
 
-	@PostMapping
-	public String submit(@Valid @ModelAttribute MemberDTO memberDTO, BindingResult bindingResult){
+	@PostMapping("/signup")
+	public String submit(@Valid @ModelAttribute("member") MemberDTO memberDTO, BindingResult bindingResult){
 		if (bindingResult.hasErrors()) {
 			return "members/signup";
 		}
